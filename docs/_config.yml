@@ -1,0 +1,14 @@
+_config.yml
+
+title: "ADV GIS"
+description: "Course labs and materials"
+remote_theme: just-the-docs/just-the-docs
+
+# Optional: search and nav settings
+search_enabled: true
+nav_enabled: true
+
+# (Optional) pretty permalinks
+permalink: pretty
+
+# Rouge code highlighter config (defaults are fine,

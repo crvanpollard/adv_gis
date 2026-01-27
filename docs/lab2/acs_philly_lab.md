@@ -1,8 +1,8 @@
-
 ---
-title: "ACS 2023 Philadelphia Lab with tidycensus + tidyverse"
-layout: page
-nav_order: 1
+title: "Lab 2: ACS 2023 Philadelphia"
+layout: default
+nav_order: 2 # controls left‑nav order (lower = higher)
+parent: "Labs" # optional if you want a Labs parent page
 ---
 
 # ACS 2023 Philadelphia Lab (tidycensus + tidyverse)
@@ -10,8 +10,9 @@ nav_order: 1
 This lab walks you through acquiring **ACS 2023 5‑year** data for **Philadelphia County, PA** at the **tract** level, reshaping to **wide** format, computing useful indicators (e.g., **% zero‑vehicle households**), and visualizing results with **maps** and a **scatter plot**.
 
 > **Prerequisites**
-> * An R installation (4.1+ recommended) and RStudio (optional but helpful)
-> * A Census API key: <https://api.census.gov/data/key_signup.html>
+>
+> - An R installation (4.1+ recommended) and RStudio (optional but helpful)
+> - A Census API key: <https://api.census.gov/data/key_signup.html>
 
 ---
 
@@ -55,6 +56,7 @@ census_api_key("YOUR_API_KEY_HERE", install = TRUE)
 ## Step 3 — Define ACS Variables
 
 We will pull:
+
 - **Total population** (`B01003_001`)
 - **Median household income** (`B19013_001`)
 - **Zero‑vehicle households** (`B08201_002`) and **total households** (`B08201_001`) so we can compute a percentage.
@@ -117,6 +119,7 @@ philly_wide <- philly_wide %>%
 ```
 
 **Verify:**
+
 ```r
 class(philly_wide)        # should include "sf"
 st_geometry(philly_wide)  # should print POLYGON/MULTIPOLYGON
@@ -161,6 +164,7 @@ ggplot(philly_wide, aes(x = med_income, y = pct_zero_car)) +
 ```
 
 (Optional) Add a trend line:
+
 ```r
 last_plot() + geom_smooth(method = "lm", se = TRUE, color = "steelblue")
 ```
@@ -196,11 +200,13 @@ ggplot(philly_wide) +
 ## Step 10 — Export Files (Optional)
 
 CSV export:
+
 ```r
 readr::write_csv(philly_wide %>% st_drop_geometry(), "philly_acs_2023_wide.csv")
 ```
 
 Shapefile export:
+
 ```r
 dir.create("Philly_Shapefiles", showWarnings = FALSE)
 sf::st_write(philly_wide, "Philly_Shapefiles/philly_acs_2023_wide.shp", delete_layer = TRUE)
@@ -220,4 +226,5 @@ sf::st_write(philly_wide, "Philly_Shapefiles/philly_acs_2023_wide.shp", delete_l
 ---
 
 ## Attribution
+
 This lab uses the R packages **tidycensus**, **tidyverse**, **sf**, and **ggplot2** to access and visualize public ACS data made available by the **U.S. Census Bureau**.
