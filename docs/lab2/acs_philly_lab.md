@@ -227,6 +227,12 @@ sf::st_write(philly_wide, "~/Documents/Jefferson/adv_gis/labs/lab_2/project_outp
 
 ---
 
+## Step 11 — Save your R Script
+
+Save your R script to your Lab 2 <- scripts folder.
+
+---
+
 ## Checks & Common Fixes
 
 - **`could not find function 'label_percent'`** → `library(scales)` or prefix with `scales::label_percent()`.
