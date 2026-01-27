@@ -92,7 +92,7 @@ View(philly_acs)
 
 `philly_acs` is an **sf tibble** in **long** format (one row per variable per tract).
 
----
+View(philly_acs) is just a quick way to automatically open the results.
 
 ## Step 5 — Convert LONG → WIDE (no geometry)
 
