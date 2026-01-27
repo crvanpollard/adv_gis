@@ -4,3 +4,4 @@ search_enabled: true
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
+code-copy: true
