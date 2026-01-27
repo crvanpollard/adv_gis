@@ -1,8 +1,8 @@
 ---
 title: "Lab 2: ACS 2023 Philadelphia"
 layout: default
-nav_order: 2 # controls left‑nav order (lower = higher)
 parent: "Labs" # optional if you want a Labs parent page
+nav_order: 2 # controls left‑nav order (lower = higher)
 ---
 
 # ACS 2023 Philadelphia Lab (tidycensus + tidyverse)
