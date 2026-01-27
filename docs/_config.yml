@@ -1,11 +1,16 @@
 title: "ADV GIS"
 description: "Course labs and materials"
+
+# Use Just the Docs as a remote theme
 remote_theme: just-the-docs/just-the-docs
 
+# Nice defaults for docs sites
 search_enabled: true
 permalink: pretty
 
+# Ensure Jekyll processes fenced code with Rouge (syntax highlighting)
 markdown: kramdown
 highlighter: rouge
 
+# 👇 Turn on the Copy-to-Clipboard button for all code blocks
 enable_copy_code_button: true
