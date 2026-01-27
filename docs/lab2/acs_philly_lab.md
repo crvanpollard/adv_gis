@@ -177,7 +177,7 @@ last_plot() + geom_smooth(method = "lm", se = TRUE, color = "steelblue")
 
 ## Step 9 — Alternate Color Ramp (Yellow → Green → Blue)
 
-Use a Brewer‑style gradient that many students find intuitive for income maps.
+This map will use a different color scake gradient
 
 ```r
 ggplot(philly_wide) +
@@ -204,19 +204,19 @@ ggplot(philly_wide) +
 ## Step 10 — Export Files (Optional)
 
 CSV export:
+You can directly export to a CSV as well as shapefile to a local folder.
 
 ```r
-readr::write_csv(philly_wide %>% st_drop_geometry(), "philly_acs_2023_wide.csv")
+readr::write_csv(philly_wide %>% st_drop_geometry(), "~/Documents/Jefferson/adv_gis/labs/lab_2/project_output/philly_income_2023.csv")
 ```
 
 Shapefile export:
 
 ```r
-dir.create("Philly_Shapefiles", showWarnings = FALSE)
-sf::st_write(philly_wide, "Philly_Shapefiles/philly_acs_2023_wide.shp", delete_layer = TRUE)
+sf::st_write(philly_wide, "~/Desktop/Jefferson/lab2/philly_acs_2023_wide.shp", delete_layer = TRUE)
 ```
 
-> On macOS, you can target the Desktop with `"~/Desktop/..."` paths.
+> On macOS, you can target the directory with `"~/Desktop/..."` paths.
 
 ---
 
