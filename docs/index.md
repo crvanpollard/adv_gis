@@ -1,0 +1,22 @@
+---
+title: "ADV GIS — Course Materials"
+layout: default
+nav_order: 0
+---
+
+# Advanced GIS (ADV GIS)
+
+Welcome to the course materials site. Use the sidebar (or the links below) to access labs and resources.
+
+## 🚀 Quick Links
+
+- **Labs**: See all labs and assignments — go to the [Labs](labs) overview.
+- **Lab 2**: ACS 2023 Philadelphia (tidycensus + tidyverse) — open **[Lab 2](lab2/acs_philly_lab)**.
+
+## 🧭 About
+
+This site is powered by **Jekyll** and the **Just the Docs** theme, published via **GitHub Pages**. It renders Markdown files as clean, readable webpages with syntax‑highlighted code blocks.
+
+## ✍️ Author
+
+Christopher Pollard
