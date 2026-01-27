@@ -177,7 +177,7 @@ last_plot() + geom_smooth(method = "lm", se = TRUE, color = "steelblue")
 
 ## Step 9 — Map: Median Household Income
 
-This map will use a different color scake gradient
+This map will use a different color scale gradient
 
 ```r
 ggplot(philly_wide) +
