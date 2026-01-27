@@ -1,7 +1,11 @@
 title: "ADV GIS"
+description: "Course labs and materials"
 remote_theme: just-the-docs/just-the-docs
-enable_copy_code_button: true
+
 search_enabled: true
 permalink: pretty
+
 markdown: kramdown
 highlighter: rouge
+
+enable_copy_code_button: true
