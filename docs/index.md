@@ -4,9 +4,9 @@ layout: default
 nav_order: 0
 ---
 
-# Advanced GIS (ADV GIS)
+# Advanced GIS for Urban Planning and Development
 
-Welcome to the course materials site. Use the sidebar (or the links below) to access labs and resources.
+Welcome to the course materials site. Use the links below to access labs and resources.
 
 ## 🚀 Quick Links
 

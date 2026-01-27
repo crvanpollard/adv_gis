@@ -1,2 +1,3 @@
-# adv_gis
-lab assignments for Advanced GIS in Urban Planning and Development
+# Advanced GIS for Urban Planning and Development
+
+Lab assignments for Advanced GIS in Urban Planning and Development

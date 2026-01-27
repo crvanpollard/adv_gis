@@ -11,8 +11,8 @@ This lab walks you through acquiring **ACS 2023 5‑year** data for **Philadelph
 
 > **Prerequisites**
 >
-> - An R installation (4.1+ recommended) and RStudio (optional but helpful)
-> - A Census API key: <https://api.census.gov/data/key_signup.html>
+> - An R installation (4.1+ recommended) and RStudio
+> - Obtain a Census API key: <a href="https://api.census.gov/data/key_signup.html" target="_new">https://api.census.gov/data/key_signup.html</a>
 
 ---
 
@@ -55,7 +55,7 @@ census_api_key("YOUR_API_KEY_HERE", install = TRUE)
 
 ## Step 3 — Define ACS Variables
 
-We will pull:
+First you will want to pull or get several variables from the census api:
 
 - **Total population** (`B01003_001`)
 - **Median household income** (`B19013_001`)
@@ -74,6 +74,8 @@ philly_vars <- c(
 
 ## Step 4 — Download ACS 2023 5‑Year Tract‑Level Data (Long)
 
+Next you will download the above variables that you identified and view the results
+
 ```r
 philly_acs <- get_acs(
   geography = "tract",
@@ -84,6 +86,8 @@ philly_acs <- get_acs(
   survey    = "acs5",
   geometry  = TRUE
 )
+
+View(philly_acs)
 ```
 
 `philly_acs` is an **sf tibble** in **long** format (one row per variable per tract).
