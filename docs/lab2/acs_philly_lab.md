@@ -16,6 +16,13 @@ This lab walks you through acquiring **ACS 2023 5‑year** data for **Philadelph
 
 ---
 
+> **Resources**
+>
+> - Getting Started with R Studio <a href="https://docs.posit.co/ide/user/ide/get-started/" target="_new">https://docs.posit.co/ide/user/ide/get-started/</a>
+> - Analyzing US Census Data: Methods, Maps, and Models in R (Klye Walker, 2023) <a href="https://walker-data.com/census-r/index.html" target="_new">https://walker-data.com/census-r/index.html</a>
+
+---
+
 ## Step 1 — Install & Load Packages
 
 ```r
