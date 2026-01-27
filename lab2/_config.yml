@@ -1,0 +1,5 @@
+_config.yml
+# _config.yml
+title: "ADV GIS — Lab 2"
+remote_theme: just-the-docs/just-the-docs
+nav_order: 1
