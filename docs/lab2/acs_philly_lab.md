@@ -211,20 +211,27 @@ ggplot(philly_wide) +
 ## Step 10 — Export Files
 
 You can directly export to a CSV as well as shapefile to a local folder.
+
+> File Path Naming Tips (Mac + Windows)
+> - Use forward slashes `/` in paths
+>  PC : `"C:/Users/<yourname>/Documents/acs_lab/data.csv"`
+>  MAC : `"/Users/<yourname>/Documents/acs_lab/data.csv"`
+> - Avoid saving directly to OneDrive or Google Drive as cloud‑synced folders sometimes lock files, rename paths, or block R from writing.
+> - Avoid spaces and special characters in folder / file names.
+
+Make sure to create a new folder for your project beforehand, so that you can easily find your exports when needing to work with your data. Notice how the below exports are going to the `project_output` location for lab_2.
+
 CSV export:
 
 ```r
-readr::write_csv(philly_wide %>% st_drop_geometry(), "~/Documents/Jefferson/adv_gis/labs/lab_2/project_output/philly_income_2023.csv")
+readr::write_csv(philly_wide %>% st_drop_geometry(), "C:/Users/<YOURNAME>/Documents/Jefferson/adv_gis/labs/lab_2/project_output/philly_income_2023.csv")
 ```
 
 Shapefile export:
 
 ```r
-sf::st_write(philly_wide, "~/Documents/Jefferson/adv_gis/labs/lab_2/project_output/philly_acs_2023_wide.shp", delete_layer = TRUE)
+sf::st_write(philly_wide, "C:/Users/<YOURNAME>/Documents/Jefferson/adv_gis/labs/lab_2/project_output/philly_acs_2023_wide.shp", delete_layer = TRUE)
 ```
-
-> On macOS, you can target the directory with `"~/Documents/..."` paths.
-
 ---
 
 ## Step 11 — Save your R Script
