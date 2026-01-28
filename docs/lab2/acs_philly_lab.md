@@ -226,8 +226,8 @@ ggplot(philly_wide) +
 You can directly export to a CSV as well as shapefile to a local folder.
 
 > File Path Naming Tips (Mac + Windows)
-> - Use forward slashes `/` in paths
->  PC : `"C:/Users/<yourname>/Documents/acs_lab/data.csv"`
+> - Use forward slashes `/` in paths <br>
+>  PC : `"C:/Users/<yourname>/Documents/acs_lab/data.csv"`<br>
 >  MAC : `"/Users/<yourname>/Documents/acs_lab/data.csv"`
 > - Avoid saving directly to OneDrive or Google Drive as cloud‑synced folders sometimes lock files, rename paths, or block R from writing.
 > - Avoid spaces and special characters in folder / file names.
