@@ -62,7 +62,7 @@ census_api_key("YOUR_API_KEY_HERE", install = TRUE)
 
 ## Step 3 — Define ACS Variables
 
-First you will want to pull or get several variables from the census api:
+First you will want to pull or get several variables from the census api.
 
 - **Total population** (`B01003_001`)
 - **Median household income** (`B19013_001`)
@@ -81,7 +81,11 @@ philly_vars <- c(
 
 ## Step 4 — Download ACS 2023 5‑Year Tract‑Level Data (Long)
 
-Next you will download the above variables that you identified and view the results
+Next you will download the above variables that you identified and view the results, but before you run that block take a quick look at the get_acs help documentation. Every function in R has a help page explaining its use. To open the Help page within Rstudio, run a question mark followed by the function.
+
+```r
+?get_acs
+```
 
 ```r
 philly_acs <- get_acs(
@@ -103,7 +107,10 @@ View(philly_acs) is just a quick way to automatically open the results.
 
 ## Step 5 — Convert LONG → WIDE (no geometry)
 
-We pivot to a single row per tract with variables as columns and compute **% zero‑vehicle households**.
+Now you'll want to pivot to a single row per tract with variables as columns and compute **% zero‑vehicle households**.
+
+- `%>%` is a pipe operator used to chain multiple operations together in a sequential manner.
+- `mutate` is a function that is used to create new columns (variables) or modify existing ones in a data frame.
 
 ```r
 wide_tmp <- philly_acs %>%
@@ -118,6 +125,8 @@ philly_wide <- wide_tmp %>%
 ---
 
 ## Step 6 — Reattach Geometry (once)
+
+“Reattaching Geometry” is important because some data‑wrangling steps drop or lose the geometry column, and you need to convert your result back into a proper GeoDataFrame so you can map it and run spatial operations again.
 
 ```r
 geom_tbl <- philly_acs %>%
@@ -140,6 +149,8 @@ st_geometry(philly_wide)  # should print POLYGON/MULTIPOLYGON
 
 ## Step 7 — Map: % Zero‑Vehicle Households
 
+Now you'll make choropleth maps of some of the variables you created. You'll choose a classification method, color ramp, and cartographic settings to clearly communicate spatial patterns across Philadelphia County.
+
 ```r
 ggplot(philly_wide) +
   geom_sf(aes(fill = pct_zero_car), color = NA) +
@@ -160,6 +171,8 @@ ggplot(philly_wide) +
 ---
 
 ## Step 8 — Scatter Plot: Income vs % Zero‑Vehicle Households
+
+Create a scatter plot showing how median household income relates to the percentage of zero‑vehicle households, optionally adding a trend line to reveal the overall relationship.
 
 ```r
 ggplot(philly_wide, aes(x = med_income, y = pct_zero_car)) +
@@ -184,7 +197,7 @@ last_plot() + geom_smooth(method = "lm", se = TRUE, color = "steelblue")
 
 ## Step 9 — Map: Median Household Income
 
-This map will use a different color scale gradient
+This map will use a different color scale gradient visulaiztion Median Household Income.
 
 ```r
 ggplot(philly_wide) +
@@ -234,7 +247,7 @@ sf::st_write(philly_wide, "C:/Users/<YOURNAME>/Documents/Jefferson/adv_gis/labs/
 ```
 ---
 
-## Step 11 — Save your R Script
+## Step 11 — Export Files
 
 Save your R script to your Lab 2 <- scripts folder.
 
