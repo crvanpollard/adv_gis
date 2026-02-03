@@ -12,6 +12,7 @@ Welcome to the course materials site. Use the links below to access labs and res
 
 - **Labs**: See all labs and assignments — go to the [Labs](labs) overview.
 - **Lab 2**: ACS 2023 Philadelphia (tidycensus + tidyverse) — open **[Lab 2](lab2/acs_philly_lab)**.
+- **Lab 3**: SEPTA Transit Stops within 500ft of a Park — open **[Lab 2](lab3/transit)**.
 
 ## 🧭 About
 
